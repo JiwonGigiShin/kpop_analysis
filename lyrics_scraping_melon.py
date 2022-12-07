@@ -9,6 +9,8 @@ from selenium.webdriver.common.by import By
 
 #open Chromedriver
 
+
+
 driver = wd.Chrome('/chromedriver') #path
 driver.maximize_window() #maximise the size of chrome window
 
@@ -22,6 +24,9 @@ driver.get(url)
 # 2010 - 2 | 10 - 1
 # 2000 - 3 | 5 - 1
 
+
+Decade = input("Decade?")
+Year = input("Year?")
 
 def scraping(Decade, Year):
 
@@ -69,4 +74,4 @@ def scraping(Decade, Year):
     df = pd.DataFrame({'YEAR':year_lst,'RANK':rank_lst,'TITLE':title_lst,'ARTIST':artist_lst})
     result_df = pd.concat([result_df, df], ignore_index=True)
 
-    result_df.to_csv(f'melonchart_{year_}.csv') #글자 깨질 때 ,encoding='ANSI'
+    return result_df.to_csv(f'melonchart_{year_}.csv') #글자 깨질 때 ,encoding='ANSI'
