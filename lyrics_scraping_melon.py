@@ -25,8 +25,8 @@ driver.get(url)
 # 2000 - 3 | 5 - 1
 
 
-Decade = input("Decade?")
-Year = input("Year?")
+# Decade = input("Decade?")
+# Year = input("Year?")
 
 def scraping(Decade, Year):
 
@@ -51,10 +51,8 @@ def scraping(Decade, Year):
     driver.find_element(By.XPATH, '//*[@id="d_chart_search"]/div/div/div[5]/div[1]/ul/li[2]/span/label').click()
     time.sleep(2)
 
-
     #Click 'Search'
     driver.find_element(By.XPATH, '//*[@id="d_srch_form"]/div[2]/button/span/span').click()
-
 
     #html
     html = driver.page_source #cf) requests.get(url)
@@ -74,4 +72,6 @@ def scraping(Decade, Year):
     df = pd.DataFrame({'YEAR':year_lst,'RANK':rank_lst,'TITLE':title_lst,'ARTIST':artist_lst})
     result_df = pd.concat([result_df, df], ignore_index=True)
 
-    return result_df.to_csv(f'melonchart_{year_}.csv') #글자 깨질 때 ,encoding='ANSI'
+    melonchart = result_df.to_csv(f'melonchart_{year_}.csv') #글자 깨질 때 ,encoding='ANSI'
+
+    return melonchart
