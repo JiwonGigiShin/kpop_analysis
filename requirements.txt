@@ -7,6 +7,10 @@ jupyterlab
 
 # data science
 nltk==3.8
+numpy
+pandas
+scikit-learn
+matplotlib
 requests
 bs4
 
