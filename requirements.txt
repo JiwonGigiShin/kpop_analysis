@@ -1,0 +1,25 @@
+# packaging
+pip>=9
+setuptools>=26
+twine
+wheel>=0.29
+jupyterlab
+
+# data science
+nltk==3.8
+numpy
+pandas
+scikit-learn
+matplotlib
+requests
+bs4
+
+# API
+# python-dotenv==0.21.0
+
+# hosting and front-end
+streamlit
+
+# utilities
+six>=1.14
+wordcloud==1.8.2.2
