@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.chart_title {
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
